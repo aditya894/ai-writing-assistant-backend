@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>WriteRight – AI Writing Assistant (₹99/month)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #f5f5ff, #eaeaea);
+    }
+    .card {
+      background: #ffffff;
+      max-width: 420px;
+      width: 100%;
+      padding: 24px 24px 20px;
+      border-radius: 16px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+      box-sizing: border-box;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .logo-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #4f46e5, #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .logo-text {
+      font-weight: 600;
+      font-size: 18px;
+      color: #111827;
+    }
+    h1 {
+      font-size: 20px;
+      margin: 4px 0 8px;
+      color: #111827;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: #4b5563;
+      margin-bottom: 14px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #eef2ff;
+      color: #4338ca;
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+    .pill span {
+      font-weight: 600;
+    }
+    ul.features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+      font-size: 13px;
+      color: #374151;
+    }
+    ul.features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    ul.features li::before {
+      content: "✓";
+      color: #16a34a;
+      margin-top: 2px;
+      font-size: 13px;
+    }
+    label {
+      font-size: 13px;
+      color: #374151;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+    input[type="email"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    input[type="email"]:focus {
+      border-color: #4f46e5;
+      box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.25);
+    }
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin: 10px 0 8px;
+    }
+    .price-main {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111827;
+    }
+    .price-sub {
+      font-size: 12px;
+      color: #6b7280;
+    }
+    button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #4f46e5, #06b6d4);
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, opacity 0.1s;
+      box-shadow: 0 10px 18px rgba(79, 70, 229, 0.35);
+    }
+    button:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 24px rgba(79, 70, 229, 0.4);
+    }
+    button:active:not(:disabled) {
+      transform: translateY(0);
+      box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+    }
+    button:disabled {
+      opacity: 0.6;
+      cursor: default;
+      box-shadow: none;
+    }
+    .status {
+      margin-top: 10px;
+      min-height: 18px;
+      font-size: 12px;
+      color: #4b5563;
+    }
+    .status.error {
+      color: #b91c1c;
+    }
+    .status.success {
+      color: #15803d;
+    }
+    .footnote {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #6b7280;
+    }
+    .test-note {
+      font-size: 11px;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <div class="logo-badge">W</div>
+      <div class="logo-text">WriteRight Assistant</div>
+    </div>
+
+    <div class="pill">
+      <span>₹99 / month</span>
+      <span>• Unlimited corrections</span>
+    </div>
+
+    <h1>Fix grammar & Hinglish in any app</h1>
+    <p class="subtitle">
+      Works with Google Docs, Word (online), Gmail, Notepad & more using a simple keyboard shortcut.
+    </p>
+
+    <ul class="features">
+      <li>Auto-corrects grammar, spelling & punctuation</li>
+      <li>Understands Hinglish (Kya, Kyun, Kaise, yaar, etc.)</li>
+      <li>Runs on your desktop – no copy-paste between tools</li>
+    </ul>
+
+    <label for="email">Email for your license (use the same email inside the app):</label>
+    <input id="email" type="email" placeholder="you@example.com" />
+
+    <div class="price">
+      <span class="price-main">₹99</span>
+      <span class="price-sub">per month • one-click UPI / card via Razorpay</span>
+    </div>
+
+    <button id="payBtn">
+      <span>Pay ₹99 & get download</span>
+    </button>
+
+    <div id="status" class="status"></div>
+    <div class="footnote">
+      After payment, you’ll get the Windows app (EXE).  
+      Use your email to activate it on your laptop.
+    </div>
+    <div class="test-note">
+      For now, this may be using Razorpay <strong>Test Mode</strong> while we pilot.
+    </div>
+  </div>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    const BACKEND = "https://ai-writing-assistant-backend-54ab.onrender.com";
+    const DOWNLOAD_URL = "https://your-domain.com/writeright.zip"; // TODO: set real ZIP URL
+
+    const statusEl = document.getElementById("status");
+    const emailInput = document.getElementById("email");
+    const payBtn = document.getElementById("payBtn");
+
+    function setStatus(msg, type = "") {
+      statusEl.textContent = msg || "";
+      statusEl.className = "status" + (type ? " " + type : "");
+    }
+
+    payBtn.onclick = async function () {
+      const email = emailInput.value.trim();
+      if (!email) {
+        alert("Please enter your email – this will be used to activate your license inside the app.");
+        emailInput.focus();
+        return;
+      }
+
+      payBtn.disabled = true;
+      setStatus("Creating order...", "");
+
+      try {
+        const res = await fetch(BACKEND + "/api/create_order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        });
+
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          setStatus("Could not create order: " + (err.detail || res.statusText), "error");
+          console.error(err);
+          payBtn.disabled = false;
+          return;
+        }
+
+        const data = await res.json();
+        console.log("Order:", data);
+        setStatus("Opening Razorpay checkout...", "");
+
+        const options = {
+          key: data.key_id,
+          amount: data.amount,
+          currency: data.currency,
+          name: "WriteRight Assistant",
+          description: "Monthly subscription (₹99)",
+          order_id: data.order_id,
+          prefill: { email: email },
+
+          handler: async function (response) {
+            setStatus("Verifying payment & activating your license...", "");
+            try {
+              const actRes = await fetch(BACKEND + "/api/activate_license", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  email: email,
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature: response.razorpay_signature,
+                }),
+              });
+
+              const actData = await actRes.json();
+              if (actRes.ok && actData.success) {
+                setStatus("License activated till " + actData.expiry + ". Starting download...", "success");
+                alert("Payment successful! Your license is active till: " + actData.expiry);
+                window.location.href = DOWNLOAD_URL;
+              } else {
+                console.error(actData);
+                setStatus("Payment done, but license activation failed. Please contact support.", "error");
+                alert("Payment completed, but license activation failed. Please contact support.");
+              }
+            } catch (e) {
+              console.error(e);
+              setStatus("Error while activating license. Please try again.", "error");
+              alert("Something went wrong while activating your license.");
+            } finally {
+              payBtn.disabled = false;
+            }
+          },
+
+          modal: {
+            ondismiss: function () {
+              setStatus("Payment cancelled.", "error");
+              payBtn.disabled = false;
+            },
+          },
+        };
+
+        const rzp = new Razorpay(options);
+        rzp.open();
+      } catch (e) {
+        console.error(e);
+        setStatus("Unexpected error. Please try again.", "error");
+        payBtn.disabled = false;
+      }
+    };
+  </script>
+</body>
+</html>
